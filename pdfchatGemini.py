@@ -84,7 +84,7 @@ def user_input(user_question):
         st.success("Added Answer: "+response["output_text"])
         new_data = {"question": user_question, "answer": response["output_text"]}
         df = pd.concat([df, pd.DataFrame([new_data])], ignore_index=True)
-        df.to_csv("questions.csv", index = False)
+        df.to_csv("/upload/questions.csv", index = False)
 
 def main():
     st.set_page_config("Chat PDF")
